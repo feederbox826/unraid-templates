@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://feederbox.cc/profile.jpg</Icon>
+  <Profile>
+    Community developer focused on extending stashapp/stash
+  </Profile>
+  <DonateText>Sustain the continued development of stash</DonateText>
+  <DonateLink>https://opencollective.com/stashapp</DonateLink>
+  <WebPage>https://feederbox.cc</WebPage>
+</Maintainer>

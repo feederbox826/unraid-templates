@@ -1,0 +1,2 @@
+# fbox826-unraid
+This repository contains templates for UnRaid CAs. If you would like to load it manually, follow the steps outlined in [forums/112170](https://forums.unraid.net/topic/112170-allow-template-repositories-to-be-hosted-from-other-sources/#comment-1126265)

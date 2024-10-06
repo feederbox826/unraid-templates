@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>stash-s6</Name>
+  <Repository>ghcr.io/feederbox826/stash-s6</Repository>
+  <Registry>https://github.com/feederbox826/stash-s6/pkgs/container/stash-s6</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/feederbox826/stash-s6/issues</Support>
+  <Project>https://github.com/stashapp/stash</Project>
+  <Overview>Modification of the stashapp/stash porn organizer with Hardware Acceleration and python dependency intallation</Overview>
+  <Category>MediaApp:Video MediaApp:Photos MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:9999]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/feederbox826/stash-s6/main/docs/icon/favicon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Branch>
+    <Tag>alpine</Tag>
+    <TagDescription>Latest stable version, no hardware acceleration</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>alpine-develop</Tag>
+    <TagDescription>Latest develop version, no hardware acceleration</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>hwaccel</Tag>
+    <TagDescription>Latest stable version, hardware acceration via jellyfin-ffmpeg</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>hwaccel-develop</Tag>
+    <TagDescription>Latest develop version, hardware acceration via jellyfin-ffmpeg</TagDescription>
+  </Branch>
+  <Config Name="Port" Target="9999" Default="9999" Mode="tcp" Description="Web UI port for accessing Stash" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="Path to your adult media content." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/stash-s6/config" Mode="rw" Description="Configs, scrapers and plugin root" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="911" Mode="" Description="User ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="911" Mode="" Description="Group ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Python Install Path" Target="/pip-install" Default="/mnt/user/appdata/stash-s6/pip-install" Mode="rw" Description="Python module install location" Type="Path" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="stash-s6 migration" Target="MIGRATE" Default="TRUE" Mode="" Description="Set to TRUE to migrate to stash-s6 /config path - should have stashapp/stash old root or hotio/stash old root mounted" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="Skip permission fix" Target="SKIP_CHOWN" Default="FALSE" Mode="" Description="Skip permission fixing for config files" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
+  <Config Name="stashapp/stash old root" Target="/root/.stash" Default="" Mode="rw" Description="Path to old stashapp/stash config folder only for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="hotio/stash old root" Target="/config/.stash" Default="" Mode="rw" Description="Config of hotio/stash /config directory for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Skip NVIDIA patch" Target="SKIP_NVIDIA_PATCH" Default="FALSE" Mode="" Description="Skip patching NVIDIA drivers for multi-stream NVENC" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
+
+  <Config Name="Metadata Path" Target="/metadata" Default="/mnt/user/appdata/stash/metadata" Mode="rw" Description="Database location" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Cache Path" Target="/cache" Default="/mnt/user/appdata/stash/cache" Mode="rw" Description="FFmpeg transcoding cache" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Generated Path" Target="/generated" Default="/mnt/user/appdata/stash/generated" Mode="rw" Description="Generated Content (screenshots, previews, transcodes, spires)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Blob Path" Target="/blobs" Default="/mnt/user/appdata/stash/blobs" Mode="rw" Description="Binary data for scene covers, images, etc" Type="Path" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Custom Certificate Path Override" Target="CUSTOM_CERT_PATH" Default="/config/certs" Mode="" Description="Path to custom root certificates to add to stash" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
+
+  <Config Name="Data Path Override" Target="STASH_STASH" Default="/data/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Metadata Path Override" Target="STASH_METADATA" Default="/metadata/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Cache Path Override" Target="STASH_CACHE" Default="/cache/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Generated Path Override" Target="STASH_GENERATED" Default="/generated/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Blob Path Override" Target="STASH_BLOBS" Default="/blobs/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  
+  <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
