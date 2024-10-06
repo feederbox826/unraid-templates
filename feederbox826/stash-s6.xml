@@ -48,20 +48,15 @@
   <Config Name="hotio/stash old root" Target="/config/.stash" Default="" Mode="rw" Description="Config of hotio/stash /config directory for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Skip NVIDIA patch" Target="SKIP_NVIDIA_PATCH" Default="FALSE" Mode="" Description="Skip patching NVIDIA drivers for multi-stream NVENC" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
 
-  <Config Name="Metadata Path" Target="/metadata" Default="/mnt/user/appdata/stash/metadata" Mode="rw" Description="Database location" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Cache Path" Target="/cache" Default="/mnt/user/appdata/stash/cache" Mode="rw" Description="FFmpeg transcoding cache" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Generated Path" Target="/generated" Default="/mnt/user/appdata/stash/generated" Mode="rw" Description="Generated Content (screenshots, previews, transcodes, spires)" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Blob Path" Target="/blobs" Default="/mnt/user/appdata/stash/blobs" Mode="rw" Description="Binary data for scene covers, images, etc" Type="Path" Display="always" Required="false" Mask="false"/>
-
   <Config Name="Custom Certificate Path Override" Target="CUSTOM_CERT_PATH" Default="/config/certs" Mode="" Description="Path to custom root certificates to add to stash" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
 
   <Config Name="Data Path Override" Target="STASH_STASH" Default="/data/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Metadata Path Override" Target="STASH_METADATA" Default="/metadata/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Cache Path Override" Target="STASH_CACHE" Default="/cache/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Generated Path Override" Target="STASH_GENERATED" Default="/generated/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Blob Path Override" Target="STASH_BLOBS" Default="/blobs/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  
+  <Config Name="Metadata Path Override" Target="STASH_METADATA" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Cache Path Override" Target="STASH_CACHE" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Generated Path Override" Target="STASH_GENERATED" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Blob Path Override" Target="STASH_BLOBS" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
   <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
