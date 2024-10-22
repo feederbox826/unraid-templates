@@ -42,8 +42,8 @@
   <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Python Install Path" Target="/pip-install" Default="/mnt/user/appdata/stash-s6/pip-install" Mode="rw" Description="Python module install location" Type="Path" Display="always" Required="false" Mask="false"/>
 
-  <Config Name="stash-s6 migration" Target="MIGRATE" Default="TRUE" Mode="" Description="Set to TRUE to migrate to stash-s6 /config path - should have stashapp/stash old root or hotio/stash old root mounted" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
-  <Config Name="Skip permission fix" Target="SKIP_CHOWN" Default="FALSE" Mode="" Description="Skip permission fixing for config files" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
+  <Config Name="stash-s6 migration" Target="MIGRATE" Default="FALSE" Mode="" Description="Set to TRUE to migrate to stash-s6 /config path - should have stashapp/stash old root or hotio/stash old root mounted" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="Skip permission fix" Target="SKIP_CHOWN" Default="TRUE" Mode="" Description="Skip permission fixing for config files" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
   <Config Name="stashapp/stash old root" Target="/root/.stash" Default="" Mode="rw" Description="Path to old stashapp/stash config folder only for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="hotio/stash old root" Target="/config/.stash" Default="" Mode="rw" Description="Config of hotio/stash /config directory for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Skip NVIDIA patch" Target="SKIP_NVIDIA_PATCH" Default="FALSE" Mode="" Description="Skip patching NVIDIA drivers for multi-stream NVENC" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
