@@ -49,13 +49,8 @@
 
   <Config Name="Custom Certificate Path Override" Target="CUSTOM_CERT_PATH" Default="/config/certs" Mode="" Description="Path to custom root certificates to add to stash" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Data Path Override" Target="STASH_STASH" Default="/data/" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <Config Name="Data Path Override" Target="STASH_STASH" Default="/data/" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Metadata Path Override" Target="STASH_METADATA" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Cache Path Override" Target="STASH_CACHE" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Generated Path Override" Target="STASH_GENERATED" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Blob Path Override" Target="STASH_BLOBS" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-
-  <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="iHD" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="iHD" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
