@@ -31,7 +31,15 @@
     <TagDescription>Latest stable version, hardware acceration via jellyfin-ffmpeg</TagDescription>
   </Branch>
   <Branch>
+    <Tag>hwaccel-alpine</Tag>
+    <TagDescription>Latest stable version, hardware acceration via jellyfin-ffmpeg</TagDescription>
+  </Branch>
+  <Branch>
     <Tag>hwaccel-develop</Tag>
+    <TagDescription>Latest develop version, hardware acceration via jellyfin-ffmpeg</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>hwaccel-alpine-develop</Tag>
     <TagDescription>Latest develop version, hardware acceration via jellyfin-ffmpeg</TagDescription>
   </Branch>
   <Config Name="Port" Target="9999" Default="9999" Mode="tcp" Description="Web UI port for accessing Stash" Type="Port" Display="always" Required="false" Mask="false"/>
@@ -39,6 +47,7 @@
   <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/stash-s6/config" Mode="rw" Description="Configs, scrapers and plugin root" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="911" Mode="" Description="User ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="911" Mode="" Description="Group ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="AVGID" Target="AVGID" Default="22" Mode="" Description="Additional Group ID for Intel hwaccel" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Python Install Path" Target="/pip-install" Default="/mnt/user/appdata/stash-s6/pip-install" Mode="rw" Description="Python module install location" Type="Path" Display="always" Required="false" Mask="false"/>
 
@@ -51,6 +60,6 @@
   <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Data Path Override" Target="STASH_STASH" Default="/data/" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="iHD" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="iHD" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Jellyfin Driver Selector" Target="LIBVA_DRIVER_NAME_JELLYFIN" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Driver Selector" Target="LIBVA_DRIVER_NAME" Default="" Mode="" Description="Set to i965 for Intel 5xxx-8xxx" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
