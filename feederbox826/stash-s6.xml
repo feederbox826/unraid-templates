@@ -31,15 +31,7 @@
     <TagDescription>Latest stable version, hardware acceration via jellyfin-ffmpeg</TagDescription>
   </Branch>
   <Branch>
-    <Tag>hwaccel-alpine</Tag>
-    <TagDescription>Latest stable version, hardware acceration via jellyfin-ffmpeg</TagDescription>
-  </Branch>
-  <Branch>
     <Tag>hwaccel-develop</Tag>
-    <TagDescription>Latest develop version, hardware acceration via jellyfin-ffmpeg</TagDescription>
-  </Branch>
-  <Branch>
-    <Tag>hwaccel-alpine-develop</Tag>
     <TagDescription>Latest develop version, hardware acceration via jellyfin-ffmpeg</TagDescription>
   </Branch>
   <Config Name="Port" Target="9999" Default="9999" Mode="tcp" Description="Web UI port for accessing Stash" Type="Port" Display="always" Required="false" Mask="false"/>
@@ -54,7 +46,6 @@
   <Config Name="stash-s6 migration" Target="MIGRATE" Default="FALSE" Mode="" Description="Set to TRUE to migrate to stash-s6 /config path - should have stashapp/stash old root or hotio/stash old root mounted" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
   <Config Name="stashapp/stash old root" Target="/root/.stash" Default="" Mode="rw" Description="Path to old stashapp/stash config folder only for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="hotio/stash old root" Target="/config/.stash" Default="" Mode="rw" Description="Config of hotio/stash /config directory for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Skip NVIDIA patch" Target="SKIP_NVIDIA_PATCH" Default="FALSE" Mode="" Description="Skip patching NVIDIA drivers for multi-stream NVENC" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
 
   <Config Name="Custom Certificate Path Override" Target="CUSTOM_CERT_PATH" Default="/config/certs" Mode="" Description="Path to custom root certificates to add to stash" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
