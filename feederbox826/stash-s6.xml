@@ -48,13 +48,13 @@
   <Config Name="PUID" Target="PUID" Default="911" Mode="" Description="User ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="911" Mode="" Description="Group ID for the running container" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="AVGID" Target="AVGID" Default="22" Mode="" Description="Additional Group ID for Intel hwaccel" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Automatic AVGID" Target="AUTO_AVGID" Default="TRUE" Mode="" Description="Automatically add the Intel group if Intel hardware is detected" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
   <Config Name="TZ" Target="TZ" Default="Etc/UTC" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Python Install Path" Target="/pip-install" Default="/mnt/user/appdata/stash-s6/pip-install" Mode="rw" Description="Python module install location" Type="Path" Display="always" Required="false" Mask="false"/>
 
   <Config Name="stash-s6 migration" Target="MIGRATE" Default="FALSE" Mode="" Description="Set to TRUE to migrate to stash-s6 /config path - should have stashapp/stash old root or hotio/stash old root mounted" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
   <Config Name="stashapp/stash old root" Target="/root/.stash" Default="" Mode="rw" Description="Path to old stashapp/stash config folder only for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
   <Config Name="hotio/stash old root" Target="/config/.stash" Default="" Mode="rw" Description="Config of hotio/stash /config directory for migration" Type="Path" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Skip NVIDIA patch" Target="SKIP_NVIDIA_PATCH" Default="FALSE" Mode="" Description="Skip patching NVIDIA drivers for multi-stream NVENC" Type="Variable" Display="advanced" Required="false" Mask="false">FALSE</Config>
 
   <Config Name="Custom Certificate Path Override" Target="CUSTOM_CERT_PATH" Default="/config/certs" Mode="" Description="Path to custom root certificates to add to stash" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Custom Certificate path" Target="/config/certs" Default="" Mode="ro" Description="" Type="Path" Display="advanced" Required="false" Mask="false"/>
